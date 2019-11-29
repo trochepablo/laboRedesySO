@@ -9,7 +9,7 @@ const PORT = 8080;
 // App
 const app = express();
 app.get('/', function (req, res) {
-  var result=""+exec( "ping -c 1 google.com" );
+  var result=""+exec( "ping -c 1 superdatabase" );
  
   while ( result.indexOf("\n")!=-1 )
     result=result.replace("\n","<br/>");
