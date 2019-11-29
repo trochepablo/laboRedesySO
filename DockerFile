@@ -1,0 +1,13 @@
+FROM node:argon
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+COPY /home/ptroche/docker/images/appNode/packages.json /usr/src/app
+COPY /home/ptroche/docker/images/appNode/server.js /usr/src/app
+
+RUN npm install
+EXPOSE 8080
+
+CMD ["npm","start"]
+
